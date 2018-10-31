@@ -1,0 +1,21 @@
+.my-experience-overlay {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.my-experience-overlay--hidden {
+  display: none;
+}
+
+.my-experience-modal {
+  background: white;
+  border-radius: 4px;
+  padding: 32px;
+}
