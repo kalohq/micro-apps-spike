@@ -41,7 +41,7 @@ fetch('http://localhost:9977')
             for (const [key, value] of new FormData(form)) {
               body.append(key, value);
             }
-            const response = await fetch(form.target, {
+            const response = await fetch(form.action, {
               method: form.method,
               mode: 'cors',
               body,
