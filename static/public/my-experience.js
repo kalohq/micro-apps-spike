@@ -17,6 +17,8 @@ fetch('http://localhost:9977')
     const {template, links, scripts} = processResponse(html);
     links.forEach(link => document.head.appendChild(link));
     const clonedScripts = document.createDocumentFragment();
+    if (scripts.length > 1)
+      throw new Error('Only one <script> tag is supported');
     scripts.forEach(script => {
       const clonedScript = Object.assign(document.createElement('script'), {
         textContent: script.textContent,
@@ -60,7 +62,6 @@ fetch('http://localhost:9977')
             this.appendChild(node.cloneNode(true))
           );
         }
-
       }
     );
   });

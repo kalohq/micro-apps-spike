@@ -32,3 +32,7 @@ Put this in the `<head>`:
 Finally, add this element to your DOM:
 
     <my-experience />
+
+## Caveats
+
+* The server-rendered app can only use one `<script>` tag.
